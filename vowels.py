@@ -2,6 +2,10 @@ def count_vowels(s):
     """Returns the count of vowels in a string."""
     return sum(1 for char in s.lower() if char in 'aeiou')
 
+def count_consonants(s):
+    """Returns the count of consonants in an alphabet-only string."""
+    return sum(1 for char in s.lower() if char.isalpha() and char not in 'aeiou')
+
 def count_uppercase(s):
     """Returns the count of uppercase letters in a string."""
     return sum(1 for char in s if char.isupper())
@@ -9,3 +13,4 @@ def count_uppercase(s):
 if __name__ == "__main__":
     test_str = "programming"
     print(f"Vowels in '{test_str}': {count_vowels(test_str)}")
+
